@@ -1,3 +1,9 @@
 def my_collect(array)
-array
+  i = 0
+  collection = []
+  while i < array.length
+    collection << yield(array[i].uppercase)
+    i += 1
+  end
+  collection
 end
